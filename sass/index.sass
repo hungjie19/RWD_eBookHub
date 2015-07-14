@@ -1,3 +1,5 @@
+body
+	font-family: Helvetica, Arial, "微軟正黑體", sans-serif
 
 .wrap
 	width: $disk_width
@@ -5,8 +7,9 @@
 
 .newsBlock
 	float: left
-	width: 60%
-	
+	width: 65%
+	margin-bottom: 10px
+
 .newsContent
 	background: #ebf0f6
 	font-size: 13px
@@ -36,4 +39,67 @@
 
 .videoBlock
 	float: left
-	width: 40%
+	width: 35%
+	margin-bottom: 10px
+	video
+		margin-bottom: 10px
+
+.newVideo
+	background: #e6e6e6
+	border-radius: 7px
+	&:before
+		content: ""
+		display: table
+	&:after 
+		content: ""
+		display: table
+		clear: both
+	zoom: 1
+	h3
+		float: left	
+		margin-right: 5px	
+		color: #7b0909
+		line-height: 32px
+		margin-left: 10px
+		font-size: 14px
+	li
+		float: left
+		margin-right: 10px	
+		border-radius: 50%
+		background: #65248c
+		padding: 6px 7px
+		margin-top: 4px
+	a
+		font-size: 10px
+		color: #fff
+		float: left
+
+.ebookHubBlock
+	float: left
+	width: 65%
+	ul
+		width: 80%
+		margin: 0 auto
+		&:before
+			content: ""
+			display: table
+		&:after 
+			content: ""
+			display: table
+			clear: both
+		zoom: 1
+	li
+		float: left
+		margin-right: 12px
+		width: 92px
+		height: 118px
+		img
+			height: 118px
+			border-radius: 4px
+			display: block
+			margin-bottom: 7px
+		p
+			font-size: 10px
+.appDownload
+	float: left
+	width: 35%

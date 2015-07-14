@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -203,6 +204,10 @@ a {
   color: black;
 }
 
+body {
+  font-family: Helvetica, Arial, "微軟正黑體", sans-serif;
+}
+
 .wrap {
   width: 1000px;
   margin: 0 auto;
@@ -210,7 +215,8 @@ a {
 
 .newsBlock {
   float: left;
-  width: 60%;
+  width: 65%;
+  margin-bottom: 10px;
 }
 
 .newsContent {
@@ -249,5 +255,96 @@ a {
 
 .videoBlock {
   float: left;
-  width: 40%;
+  width: 35%;
+  margin-bottom: 10px;
+}
+
+.videoBlock video {
+  margin-bottom: 10px;
+}
+
+.newVideo {
+  background: #e6e6e6;
+  border-radius: 7px;
+  zoom: 1;
+}
+
+.newVideo:before {
+  content: "";
+  display: table;
+}
+
+.newVideo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.newVideo h3 {
+  float: left;
+  margin-right: 5px;
+  color: #7b0909;
+  line-height: 32px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.newVideo li {
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #65248c;
+  padding: 6px 7px;
+  margin-top: 4px;
+}
+
+.newVideo a {
+  font-size: 10px;
+  color: #fff;
+  float: left;
+}
+
+.ebookHubBlock {
+  float: left;
+  width: 65%;
+}
+
+.ebookHubBlock ul {
+  width: 80%;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+.ebookHubBlock ul:before {
+  content: "";
+  display: table;
+}
+
+.ebookHubBlock ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ebookHubBlock li {
+  float: left;
+  margin-right: 12px;
+  width: 92px;
+  height: 118px;
+}
+
+.ebookHubBlock li img {
+  height: 118px;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.ebookHubBlock li p {
+  font-size: 10px;
+}
+
+.appDownload {
+  float: left;
+  width: 35%;
 }
