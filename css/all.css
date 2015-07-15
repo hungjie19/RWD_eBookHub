@@ -364,7 +364,7 @@ body {
 }
 
 .appDownloadImg {
-  padding: 10%;
+  padding: 0 5%;
   display: block;
 }
 
@@ -458,6 +458,9 @@ footer p:hover {
   .appDownload {
     float: none;
     width: 100%;
+  }
+  .appDownloadImg {
+    padding: 5%;
   }
 }
 
