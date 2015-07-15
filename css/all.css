@@ -204,13 +204,36 @@ a {
   color: black;
 }
 
+.wrap, .newsBlock, .newVideo, .newVideo span, .newVideo ul, .ebookHubBlock, .ebookHubBlock ul {
+  zoom: 1;
+}
+
+.wrap:before, .newsBlock:before, .newVideo:before, .newVideo span:before, .newVideo ul:before, .ebookHubBlock:before, .ebookHubBlock ul:before {
+  content: "";
+  display: table;
+}
+
+.wrap:after, .newsBlock:after, .newVideo:after, .newVideo span:after, .newVideo ul:after, .ebookHubBlock:after, .ebookHubBlock ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: Helvetica, Arial, "微軟正黑體", sans-serif;
+  background: #034883;
 }
 
 .wrap {
   width: 1000px;
   margin: 0 auto;
+  background: #fff;
+  padding: 0 5px;
 }
 
 .newsBlock {
@@ -229,12 +252,13 @@ body {
 
 .newsContent h2 {
   background: #FFF;
+  font-weight: bold;
 }
 
 .newsContent p {
   padding: 0px 10px 0px 10px;
   color: #545454;
-  line-height: 20px;
+  line-height: 1.8em;
 }
 
 .firstNews {
@@ -261,32 +285,23 @@ body {
 
 .videoBlock video {
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .newVideo {
   background: #e6e6e6;
   border-radius: 7px;
-  zoom: 1;
+  width: 90%;
+  margin: 0 auto;
+  padding: 7px;
 }
 
-.newVideo:before {
-  content: "";
-  display: table;
-}
-
-.newVideo:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.newVideo h3 {
+.newVideo span {
   float: left;
-  margin-right: 5px;
+  margin: 0 5px;
   color: #7b0909;
-  line-height: 32px;
-  margin-left: 10px;
   font-size: 14px;
+  line-height: 24px;
 }
 
 .newVideo li {
@@ -295,7 +310,10 @@ body {
   border-radius: 50%;
   background: #65248c;
   padding: 6px 7px;
-  margin-top: 4px;
+}
+
+.newVideo li:nth-child(6) {
+  margin-right: 0px;
 }
 
 .newVideo a {
@@ -309,28 +327,23 @@ body {
   width: 65%;
 }
 
+.ebookHubBlock h2 {
+  margin-bottom: 30px;
+}
+
 .ebookHubBlock ul {
   width: 80%;
   margin: 0 auto;
-  zoom: 1;
-}
-
-.ebookHubBlock ul:before {
-  content: "";
-  display: table;
-}
-
-.ebookHubBlock ul:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .ebookHubBlock li {
   float: left;
   margin-right: 12px;
   width: 92px;
-  height: 118px;
+}
+
+.ebookHubBlock li:nth-child(5) {
+  margin-right: 0px;
 }
 
 .ebookHubBlock li img {
@@ -341,10 +354,149 @@ body {
 }
 
 .ebookHubBlock li p {
-  font-size: 10px;
+  font-size: 12px;
+  padding: 5px;
 }
 
 .appDownload {
   float: left;
   width: 35%;
+}
+
+.appDownloadImg {
+  padding: 10%;
+  display: block;
+}
+
+.appDownloadImg img {
+  width: 100%;
+}
+
+footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  padding: 50px;
+  color: #c6c6c6;
+}
+
+footer p:hover {
+  color: #ffdd00;
+}
+
+@media (max-width: 1000px) {
+  .wrap {
+    width: 96%;
+    padding: 0 2%;
+  }
+  footer {
+    width: 96%;
+    width-padding: 0 2%;
+  }
+  .newsBlock {
+    float: none;
+    width: 100%;
+  }
+  .newsContent {
+    font-size: 16px;
+    margin: 0;
+  }
+  .newsContent h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .videoBlock {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .videoBlock video {
+    margin-bottom: 20px;
+  }
+  .newVideo span {
+    line-height: 44px;
+    font-size: 18px;
+  }
+  .newVideo li {
+    padding: 12px 14px;
+    margin-right: 8%;
+  }
+  .newVideo a {
+    font-size: 16px;
+  }
+  .ebookHubBlock {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .ebookHubBlock ul {
+    width: 100%;
+  }
+  .ebookHubBlock li {
+    width: 19%;
+    margin-right: 1%;
+  }
+  .ebookHubBlock li:nth-child(5) {
+    margin-right: 0px;
+  }
+  .ebookHubBlock li img {
+    width: 100%;
+    height: auto;
+  }
+  .ebookHubBlock li p {
+    font-size: 18px;
+  }
+  .appDownload {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ebookHubBlock li {
+    width: 24%;
+    margin-right: 1%;
+  }
+  .ebookHubBlock li:nth-child(4) {
+    margin-right: 0px;
+  }
+  .ebookHubBlock li:nth-child(5) {
+    display: none;
+  }
+  .newVideo li {
+    margin-right: 5%;
+  }
+  .newVideo li:nth-child(5) {
+    margin-right: 0px;
+  }
+  .newVideo li:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .ebookHubBlock li {
+    width: 30%;
+  }
+  .ebookHubBlock li:nth-child(3) {
+    margin-right: 0px;
+  }
+  .ebookHubBlock li:nth-child(4) {
+    display: none;
+  }
+  .newVideo li {
+    margin-right: 3%;
+  }
+  .newVideo li:nth-child(5) {
+    display: none;
+  }
 }
