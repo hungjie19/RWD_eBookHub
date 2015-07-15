@@ -485,7 +485,8 @@ footer p:hover {
 
 @media (max-width: 480px) {
   .ebookHubBlock li {
-    width: 30%;
+    width: 32%;
+    margin-right: 2%;
   }
   .ebookHubBlock li:nth-child(3) {
     margin-right: 0px;
